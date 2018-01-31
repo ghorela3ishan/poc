@@ -19,12 +19,10 @@
   Name<input id="name" type="text"><br><br>
   Email<input id="Email" type="text"><br><br>
   Query<textarea id="Query" rows="4" cols="50"></textarea>
-  <button class="button" onclick="myFunction()" type="submit" value="Submit">Submit</button><br><br>
- <script>
-function myFunction() {
-  alert("Your query has been submitted succesfully!");
-}
-</script>
+  <button class="button" {{action "myFunction"}} type="submit" value="Submit">Submit</button><br><br>
+
+
+
 
 
       {{#link-to 'about' class="button"}}
