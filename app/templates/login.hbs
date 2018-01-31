@@ -7,10 +7,10 @@
 
     <div class="container">
       <label><b>Username</b></label>
-      {{input type="text" value=userName}}
+      {{input type="text"  value=userName required=true}}
 
       <label><b>Password</b></label>
-      {{input type="password" value=password}}
+      {{input type="password" required="required" value=password}}
 
 
       <button {{action 'login'}}>login</button>
