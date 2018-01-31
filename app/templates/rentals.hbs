@@ -8,7 +8,35 @@
   </div>
 
   {{#each model as |rentalUnit|}}
-    {{rental-listing rental=rentalUnit}}
+    {{rental-listing title=rentalUnit.title image=rentalUnit.image category=rentalUnit.category owner=rentalUnit.owner city=rentalUnit.city bedrooms=rentalUnit.bedrooms}}
   {{/each}}
-
+  <br><br>
+  <hr>
+  <form id="myForm">
+    <div>
+      <label>Title</label>
+      {{input type='text' value=title  placeholder='title' class='form-input'}}
+    </div>
+    <div>
+      <label>Image</label>
+      {{input type='text' value=image  placeholder='Image URL' class='form-input'}}
+    </div>
+    <div>
+      <label>Type</label>
+      {{input type='text' value=category  placeholder="Category" class='form-input'}}
+    </div>
+    <div>
+      <label>Owner</label>
+      {{input type='text' value=owner  placeholder="Owner" class='form-input'}}
+    </div>
+    <div>
+      <label>Location</label>
+      {{input type='text' value=city  placeholder='Location' class='form-input'}}
+    </div>
+    <div>
+      <label>Bedrooms</label>
+      {{input type='text' value=bedrooms pattern='/^(0-9)*$/'  placeholder="Number of Bedrooms" class='form-input'}}
+    </div>
+    <button {{action "postProperty"}} id="form_button">Submit</button>
+  </form>
 {{outlet}}
