@@ -1,0 +1,13 @@
+<h2>List of Team Members</h2>
+<ul  style="list-style: none;">
+{{#each model as |item|}}
+<hr/>
+<li>
+<div>
+  <img src="{{item.image}}" alt="" width="100px" height="100px" >
+  <h3>{{item.id}} - {{item.name}}</h3>
+  <br/>
+  <hr/>
+  </div></li>
+{{/each}}
+</ul>

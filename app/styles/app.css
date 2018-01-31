@@ -41,6 +41,13 @@ img.avatar {
     border-radius: 10%;
 }
 
+img.avatar1
+{
+
+  width: 20%;
+  border-radius: 10%;
+}
+
 .container {
     padding: 16px;
 }
