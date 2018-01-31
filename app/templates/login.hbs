@@ -4,26 +4,22 @@
     <img src="https://cdn.pixabay.com/photo/2017/03/21/13/27/evil-2162179_960_720.png" alt="Avatar" class="avatar">
   </div>
 
-  <div class="container">
-    <label><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="uname" required>
 
-    <label><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
-    {{#link-to 'rentals' class="button"}}
-      LOGIN
-    {{/link-to}}
+    <div class="container">
+      <label><b>Username</b></label>
+      {{input type="text" value=userName}}
+
+      <label><b>Password</b></label>
+      {{input type="password" value=password}}
 
 
-    <label>
-      <input type="checkbox" checked="checked"> Remember me
-    </label>
-  </div>
+      <button {{action 'login'}}>login</button>
+      <label>
+        {{input type="checkbox" checked="checked"}} Remember me
+      </label>
+    </div>
 
   <div class="container" style="background-color:#f1f1f1">
 
     <span class="psw">Forgot <a href="#">passord?</a></span>
   </div>
-
-
-{{outlet}}

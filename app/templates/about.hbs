@@ -10,4 +10,26 @@
         Contact Us
       {{/link-to}}
   </div>
+  <div class="jumbo">
+    <h2>What media says about us</h2>
+  </div>
+  {{#each model as |rental|}}
+    <article class="listing">
+      <h3>{{rental.title}}</h3>
+      <div class="detail owner">
+        <span>Brand:</span> {{rental.owner}}
+      </div>
+      <div class="detail type">
+        <span>What they say:</span> {{rental.category}}
+      </div>
+      <!--<div class="detail location">
+        <span>Location:</span> {{rental.city}}
+      </div>
+      <div class="detail bedrooms">
+        <span>Number of bedrooms:</span> {{rental.bedrooms}}
+      </div>-->
+    </article>
+  {{/each}}
+
+
 {{outlet}}
